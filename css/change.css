@@ -1,0 +1,25 @@
+
+.clean-blurb-round-icon p span{
+    margin-bottom: 0;
+    text-align: center;
+    color:#c50820;
+    font-size:24px;
+    font-weight: bolder;
+    margin-right:5px;
+}
+.adv{
+    background: #ece7e7;
+}
+.adv-l{border-right:5px solid #ff760c;}
+.clean-port-work-details2{height:280px;width:100%;color:#ffffff;position: absolute;z-index: 9999;top:0px;left:0px;background: rgba(255,118,12,0.5);padding-top:20%;}
+.clean-port-work-details2 p{color:#ffffff;}
+
+.clean-port-work-details1{height:280px;width:100%;position: relative;}
+
+.weixin{font-size:24px;padding-top:3%;}
+#email{width:65%;}
+.yanzheng{width:30%;display: inline-block;background: #ff760c;color:#ffffff;text-align: center;height:40px;line-height:40px;float:right;}
+@media screen and (max-width: 768px){
+    .weixin{font-size:14px;}
+}
+.change-c{color:#333333;}

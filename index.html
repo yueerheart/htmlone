@@ -1,0 +1,701 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- PAGE TITLE -->
+    <title>首页</title>
+
+
+    <!-- ===================================
+        NORMALIZE CSS
+    ==================================== -->
+    <link rel="stylesheet" href="css/normalize.css">
+
+    <!-- ===================================
+        BOOTSTRAP 
+    ==================================== -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- ===================================
+        GOOGLE FONTS
+    ==================================== -->
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:600,700,400,300' rel='stylesheet' type='text/css'>
+
+    <!-- ===================================
+        FONTS ICON
+    ==================================== -->
+    <link rel="stylesheet" type="text/css" href="http://www.jq22.com/jquery/font-awesome.4.6.0.css">
+
+    <!-- ===================================
+        PLUGIN
+    ==================================== -->
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/slider-pro.css">
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/owl.theme.css">
+    <link rel="stylesheet" href="css/owl.transitions.css">
+    <link rel="stylesheet" href="css/animate.css">
+
+    <!-- ===================================
+        MAIN STYLESHEET
+    ==================================== -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/color-green.css" id="colors" />
+    <link rel="stylesheet" href="css/change.css">
+    <style>
+        .carousel-fade .carousel-inner .item{
+            opacity:0.3;
+            -webkit-transition-property:opacity ;
+            -moz-transition-property:opacity ;
+            -ms-transition-property:opacity ;
+            -o-transition-property:opacity ;
+            transition-property:opacity ;
+        }
+        .carousel-fade .carousel-inner .active{
+            opacity: 1;
+        }
+        .carousel-fade .carousel-inner .active.left,.carousel-fade .carousel-inner .active.right{
+            left: 0;
+            opacity: 0;
+        }
+        .carousel-fade .carousel-inner .next.left,.carousel-fade .carousel-inner .prev.right {
+            opacity: 1;
+        }
+        .carousel-control.left{ background-image:none;}
+        .carousel-control.right{ background-image:none;}
+        .carousel-control{text-shadow: none;color:rgba(255,200,255,0.5);}
+        .carousel-indicators li{border:1px solid #f97602;}
+        .foot{background: #000000;color:#ffffff;line-height:60px;height:60px;margin-top:3%;}
+        .container-fluid{padding-right:0px;padding-left:0px;}
+        .font-css{font-size:16px;color:#333333;}
+        .login-re{display: none;}
+        .login-re .container{padding-top:5%;padding-bottom:5%;}
+        .btn{width:90%;background: #f97602;color:#ffffff;text-align: center;display: block;margin:auto;padding-top:4px;padding-bottom:4px;}
+
+        #myCarousel{position: relative;}
+        .regi-css{position: absolute;}
+        .register{height:300px;width:275px;border-radius: 10px;background: rgba(255,255,255,0.4);padding:15px;top:2%;right:8%;z-index: 999;
+        }
+        .reCon{width:100%;height:100%;margin:auto;background: rgba(255,255,255,0.4);padding-top:8%;padding-left:5%;padding-right:5%;border:1px solid #d43f3a;border-radius:5px; }
+        .btn{margin-bottom:5%;}
+        .reCon h4{color:#ff0000;border-bottom:1px dashed #ff0000;padding-bottom:5%;font-weight: bolder;margin-bottom:5%;}
+        .reCon h4 span{float:right;color:#fcd31f;}
+
+        @media (min-width: 0px) and (max-width: 768px) {
+            .re-top{display: none;}
+            .foot div p{font-size:12px;}
+            .container-fluid{padding-right:0px;padding-left:0px;}
+            .carousel-indicators{bottom:-10px;}
+            header{display: none;}
+            .clean-section-wrapper{padding:40px 0;}
+            .clean-section-header{margin-bottom:50px;}
+            .login-re{display: block;}
+        }
+        @media (min-width: 768px) and (max-width: 1200px) {.re-top{display: none;}.container-fluid{padding-right:0px;padding-left:0px;}
+            .login-re{display: block;}}
+
+    </style>
+
+
+
+    <!--[if lt IE 9]>
+        <script src="js/html5shiv.min.js"></script>
+        <script src="js/respond.min.js"></script>
+        <script type="text/javascript" src="js/selectivizr-min.js"></script>
+        <script src="http://s3.amazonaws.com/nwapi/nwmatcher/nwmatcher-1.2.5-min.js"></script>
+		<script src="http://css3-mediaqueries-js.googlecode.com/files/css3-mediaqueries.js"></script>
+        <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
+
+	<![endif]-->
+</head>
+
+<body>
+    <!-- ===================================
+        PRELOADER
+    ==================================== -->
+    <div class="preloader">
+        <div class="status"></div>
+    </div>
+
+    <!-- ===================================
+        HEADER
+    ==================================== -->
+    <header>
+        <!-- Navigation Menu start-->
+        <nav class="navbar clean-main-menu" role="navigation">
+            <div class="container">
+
+                <!-- Navbar Toggle -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                    <!-- Logo -->
+                    <!--<a class="navbar-brand" href="index.html"><img class="logo" id="logo" src="images/logo.png" alt="Page"></a>-->
+
+                </div>
+                <!-- Navbar Toggle End -->
+
+                <!-- navbar-collapse start-->
+                <div id="nav-menu" class="navbar-collapse collapse" role="navigation">
+                    <ul class="nav navbar-nav clean-menu-wrapper">
+                        <li class="active">
+                        	<a href="#clean-slider">首页</a>
+                        </li>
+                        <li>
+                            <a href="#about">了解我们</a>
+                        </li>
+                        <li>
+                        	<a href="#featured-works">我们优势</a>
+                        </li>
+                        <li>
+                            <a href="#offer">师资力量</a>
+                        </li>
+
+                        <li>
+                        	<a href="#contact">注册账号</a>
+                        </li>
+                        <li>
+                            <a href="#pricing">加入我们</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- navbar-collapse end-->
+
+            </div>
+        </nav>
+        <!-- Navigation Menu end-->
+    </header>
+
+
+    <!-- ===================================
+        MAIN SLIDER
+    ==================================== -->
+    <!--<section class="slider-pro clean-slider" id="clean-slider">-->
+        <!--<div class="sp-slides">-->
+
+            <!--&lt;!&ndash; Slides &ndash;&gt;-->
+            <!--<div class="sp-slide clean-main-slides">-->
+                <!--<div class="clean-img-overlay"></div>-->
+
+                <!--<img class="sp-image img-responsive" src="images/slider/banner_02.png" alt="Slider 1"/>-->
+
+                <!--&lt;!&ndash;<h1 class="sp-layer clean-slider-text-big"&ndash;&gt;-->
+                <!--&lt;!&ndash;data-position="center" data-show-transition="right" data-hide-transition="right" data-show-delay="1500" data-hide-delay="200">&ndash;&gt;-->
+                <!--&lt;!&ndash;<span class="clean-color-contras">CLEAN</span> - Slider Responsive HTML Template&ndash;&gt;-->
+                <!--&lt;!&ndash;</h1>&ndash;&gt;-->
+                <!--&lt;!&ndash;<p class="sp-layer"&ndash;&gt;-->
+                <!--&lt;!&ndash;data-position="center" data-vertical="15%" data-show-delay="2000" data-hide-delay="200" data-show-transition="left" data-hide-transition="down">&ndash;&gt;-->
+                   <!--&lt;!&ndash;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&ndash;&gt;-->
+                <!--&lt;!&ndash;</p>&ndash;&gt;-->
+
+            <!--</div>-->
+            <!--&lt;!&ndash; Slides End &ndash;&gt;-->
+
+            <!--&lt;!&ndash; Slides &ndash;&gt;-->
+            <!--<div class="sp-slide clean-main-slides">-->
+            <!--<div class="clean-img-overlay"></div>-->
+                <!--<img class="sp-image img-responsive" src="images/slider/banner_02.png" alt="Slider 2"/>-->
+
+                <!--&lt;!&ndash;<h1 class="sp-layer clean-slider-text-big"&ndash;&gt;-->
+                 <!--&lt;!&ndash;data-position="center" data-show-transition="right" data-hide-transition="right" data-show-delay="1500" data-hide-delay="200">&ndash;&gt;-->
+                    <!--&lt;!&ndash;<span class="clean-color-contras">CLEAN</span> - Slider Responsive HTML Template&ndash;&gt;-->
+                <!--&lt;!&ndash;</h1>&ndash;&gt;-->
+
+                <!--&lt;!&ndash;<p class="sp-layer"&ndash;&gt;-->
+                 <!--&lt;!&ndash;data-position="center" data-vertical="15%" data-show-delay="2000" data-hide-delay="200" data-show-transition="left" data-hide-transition="down">&ndash;&gt;-->
+                    <!--&lt;!&ndash;Lorem ipsum dolor sit amet, consectetur adipisicing.&ndash;&gt;-->
+                <!--&lt;!&ndash;</p>&ndash;&gt;-->
+            <!--</div>-->
+            <!--&lt;!&ndash; Slides End &ndash;&gt;-->
+
+            <!--&lt;!&ndash; Slides &ndash;&gt;-->
+            <!--<div class="sp-slide clean-main-slides">-->
+                <!--<div class="clean-img-overlay"></div>-->
+
+                <!--<img class="sp-image img-responsive" src="images/slider/banner_02.png" alt="Slider 3"/>-->
+
+                <!--&lt;!&ndash;<h1 class="sp-layer clean-slider-text-big"&ndash;&gt;-->
+                <!--&lt;!&ndash;data-position="center" data-show-transition="right" data-hide-transition="right" data-show-delay="1500" data-hide-delay="200">&ndash;&gt;-->
+                 <!--&lt;!&ndash;<span class="clean-color-contras">CLEAN</span> - Slider Responsive HTML Template&ndash;&gt;-->
+                <!--&lt;!&ndash;</h1>&ndash;&gt;-->
+
+                <!--&lt;!&ndash;<p class="sp-layer"&ndash;&gt;-->
+                <!--&lt;!&ndash;data-position="center" data-vertical="15%" data-show-delay="1000" data-hide-delay="200" data-show-transition="left" data-hide-transition="down">&ndash;&gt;-->
+                    <!--&lt;!&ndash;Lorem ipsum dolor sit amet, consectetur adipisicing.&ndash;&gt;-->
+                <!--&lt;!&ndash;</p>&ndash;&gt;-->
+
+            <!--</div>-->
+            <!--&lt;!&ndash; Slides End &ndash;&gt;-->
+
+        <!--</div>-->
+    <div class="container-fluid">
+        <div class="register regi-css re-top">
+            <div class="reCon text-center">
+                <h4>选择我们没有错！</h4>
+                <input type="text" class="form-group form-control te" placeholder="请输入您的手机号">
+                <input type="text" class="form-group form-control te" placeholder="请输入您的密码">
+                <button class="btn btn-danger form-control" onclick="openreal();" target="_blank">注册账户</button>
+                <button class="btn btn-warning form-control" data="jstz_system" onclick="opensystem();" style="background: #ec971f">登录平台</button>
+                <!--<button class="btn btn-success form-control" data="jstz_kf53" onclick="openkf();">在线客服</button>-->
+                <!--<p>微信扫一扫，加入股票高手群</p>-->
+                <!--<img src="images/er.png">-->
+
+            </div>
+        </div>
+        <div id="myCarousel" class="carousel slide carousel-fade">
+            <!-- 轮播（Carousel）指标 -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+            <!-- 轮播（Carousel）项目 -->
+            <div class="carousel-inner">
+                <div class="item active ">
+                    <img src="images/slider/banner_02.png" alt="First slide">
+                </div>
+                <div class="item">
+                    <img src="images/slider/banner_02.png" alt="Second slide">
+                </div>
+                <div class="item">
+                    <img src="images/slider/banner_02.png" alt="Third slide">
+                </div>
+            </div>
+            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
+        </div>
+    </div>
+
+        <!--<script>-->
+
+        <!--</script>-->
+    <!--</section>-->
+<div class="container-fluid login-re">
+    <div class="container">
+        <div class="col-md-6 col-sm-6 col-xs-6">
+            <a class="btn">免费开设账户</a>
+
+        </div>
+        <div class="col-md-6 col-sm-6 col-xs-6">
+            <a class="btn">登录账户</a>
+        </div>
+    </div>
+</div>
+
+    <!-- ===================================
+        ABOUT SECTION
+    ==================================== -->
+    <section id="about" class="clean-section-wrapper background-one">
+        <div class="container">
+            <div class="row">
+
+                <!-- Section Header -->
+                <div class="col-md-12 col-sm-12 col-xs-12 clean-section-header wow fadeInDown">
+                    <h1><span class="clean-color-contras">了解我们</span></h1>
+                    <div class="clean-line"></div>
+                    <p class="col-md-8 col-sm-10 col-xs-12 col-md-offset-2 col-sm-offset-1 change-c font-css">专业化的配资平台，致力于打造国内领先的综合资产管理配资平台。</p>
+                </div>
+                <!-- Section Header End -->
+
+                <!-- What We Do -->
+                <div class="clean-what-we-do">
+
+                    <div class="col-md-4 col-sm-4 col-xs-12 clean-blurb-round-icon wow bounceInLeft">
+                        <div class="clean-icon">
+                            <i class="fa fa-html5"></i>
+                        </div>
+                        <h3>用户累计盈利</h3>
+                        <p><span>7393.16</span>万元</p>
+                    </div>
+
+                    <div class="col-md-4 col-sm-4 col-xs-12 clean-blurb-round-icon wow bounceIn" data-wow-delay=".5s">
+                        <div class="clean-icon">
+                            <i class="fa fa-css3"></i>
+                        </div>
+                        <h3>送出实盘资金</h3>
+                        <p><span>9.05</span>万元</p>
+                    </div>
+
+                    <div class="col-md-4 col-sm-4 col-xs-12 clean-blurb-round-icon wow bounceIn" data-wow-delay=".5s">
+                        <div class="clean-icon">
+                            <i class="fa fa-laptop"></i>
+                        </div>
+                        <h3>已累计客户</h3>
+                        <p><span>38615</span>位</p>
+                    </div>
+
+                    <!--<div class="col-md-3 col-sm-3 col-xs-12 clean-blurb-round-icon wow bounceInRight" data-wow-delay=".5s">-->
+                        <!--<div class="clean-icon">-->
+                            <!--<i class="fa fa-support"></i>-->
+                        <!--</div>-->
+                        <!--<h3>FREE SUPPORT</h3>-->
+                        <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur libero vel deserunt nulla voluptatibus consequuntur adipisci quae. Facere, vero!.</p>-->
+                    <!--</div>-->
+
+                </div>
+                <!-- What We Do End -->
+
+            </div>
+        </div>
+    </section>
+
+
+    
+    <!-- ===================================
+        SCREENSHOOT
+    ==================================== -->
+    <section class="clean-custom-sec clean-section-wrapper background-two" class="adv" id="featured-works">
+        <div class="container">
+            <div class="row">
+                <!-- Section Header -->
+                <div class="col-md-12 col-sm-12 col-xs-12 clean-section-header wow fadeInDown">
+                    <h1><span class="clean-color-contras">我们优势</span></h1>
+                    <div class="clean-line"></div>
+                    <p class="col-md-8 col-sm-10 col-xs-12 col-md-offset-2 col-sm-offset-1 change-c font-css">凡新用户加群皆免费索取《股民解套宝典》，给您不一样的体验！</p>
+                </div>
+                <!-- Section Header End -->
+
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <img src="images/change/adv.png" class="img-responsive">
+                </div>
+                <div class="col-md-5 col-sm-5 col-xs-12 adv-l">
+                    <img src="images/change/adv_03.png" class="img-responsive wow bounceInLeft">
+                </div>
+                <div class="col-md-7 col-sm-7 col-xs-12" style="padding:0px;margin:0px;">
+                    <img src="images/change/adv_05.png" class="img-responsive wow bounceInRight">
+                </div>
+
+                <!--<div class="col-md-6 col-sm-6 col-xs-12 clean-custom-sec-img wow bounceInLeft">-->
+                    <!--<img src="images/custom.jpg" alt="Custom Image">-->
+                <!--</div>-->
+
+                <!--<div class="col-md-6 col-sm-6 col-xs-12 clean-custom-sec-text wow bounceInRight">-->
+                    <!--<h3>Lorem ipsum dolor sit amet.</h3>-->
+                    <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aut tenetur, amet earum quia eligendi obcaecati. Repudiandae id illum, vero iste enim reprehenderit quaerat, harum pariatur ipsa nulla tempora ex ratione illo assumenda libero ea, delectus vitae, expedita optio porro.</p>-->
+                    <!---->
+                    <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aut tenetur, amet earum quia eligendi obcaecati. Repudiandae id illum, vero iste enim reprehenderit quaerat, harum pariatur ipsa nulla tempora ex ratione illo assumenda libero ea, delectus vitae, expedita optio porro.</p>-->
+                    <!---->
+                    <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aut tenetur, amet earum quia eligendi obcaecati. Repudiandae id illum, vero iste enim reprehenderit quaerat, harum pariatur ipsa nulla tempora ex ratione illo assumenda libero ea, delectus vitae, expedita optio porro.</p>-->
+                       <!---->
+                    <!---->
+                <!--</div>-->
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- ===================================
+        FEATURED WORK SECTION
+    ==================================== -->
+    <section id="offer" class="clean-section-wrapper">
+        <!-- Container -->
+        <div class="container">
+            <div class="row">
+
+                <!-- Section Header -->
+                <div class="col-md-12 col-sm-12 col-xs-12 clean-section-header wow fadeInDown">
+                    <h1><span class="clean-color-contras">师资力量</span></h1>
+                    <div class="clean-line"></div>
+                    <p class="col-md-8 col-sm-10 col-xs-12 col-md-offset-2 col-sm-offset-1 change-c font-css">导师教你如何炒股，走上正确之路，实时分析股市行情，让您赚赚赚！</p>
+                </div>
+                <!-- Section Header End -->
+
+            </div>
+        </div>
+        <!-- Container End -->
+        
+        <!--<div class="copyrights">Collect from <a href="http://www.jq22.com/"  title="师资">网站模板</a></div>-->
+
+        <!-- Featured Works Slider -->
+        <div class="container-fluid">
+            <div class="row-fluid">
+
+                <div class="clean-portfolio-work-slider-section wow fadeIn" data-wow-duration="2s">
+                    <div id="featured-work-slider" class="owl-carousel clean-portfolio-works-slider">
+
+                        <!-- Work 1 -->
+                        <div class="clean-portfolio-work-item">
+
+                            <div class="clean-port-work-details1">
+                                <img src="images/change/pic_01.jpg" alt="Feature Work 1">
+                                <div class="clean-port-work-details2 text-center">
+                                    <!--<h4>肖强东</h4>-->
+                                    <!--<p>金牌讲师,教你走向正确之路！</p>-->
+                                </div>
+                            </div>
+
+
+                            <!--<div class="clean-port-work-details">-->
+                                <!--<ul class="clean-work-meta">-->
+                                    <!--<li class="clean-lighbox"><a href="images/change/shizi_03.png" class="clean-featured-work-img"><i class="fa fa-cog"></i></a></li>-->
+                                <!--</ul>-->
+                            <!--</div>-->
+
+                        </div>
+                        <!-- Work 1 End -->
+
+                        <!-- Work 2 -->
+                        <div class="clean-portfolio-work-item">
+
+                            <div class="clean-port-work-details1">
+                                <img src="images/change/pic_02.jpg" alt="Feature Work 1">
+                                <div class="clean-port-work-details2 text-center">
+                                    <!--<h4>肖强东</h4>-->
+                                    <!--<p>金牌讲师,教你走向正确之路！</p>-->
+                                </div>
+                            </div>
+                            <!--<div class="clean-port-work-details">-->
+                                <!--<ul class="clean-work-meta">-->
+                                    <!--<li class="clean-lighbox"><a href="images/change/shizi_03.png" class="clean-featured-work-img"><i class="fa fa-cog"></i></a></li>-->
+                                <!--</ul>-->
+                            <!--</div>-->
+
+                        </div>
+                        <!-- Work 2 End -->
+
+                        <!-- Work 3 -->
+                        <div class="clean-portfolio-work-item">
+
+                            <div class="clean-port-work-details1">
+                                <img src="images/change/pic_03.jpg" alt="Feature Work 1">
+                                <div class="clean-port-work-details2 text-center">
+                                    <!--<h4>肖强东</h4>-->
+                                    <!--<p>金牌讲师,教你走向正确之路！</p>-->
+                                </div>
+                            </div>
+                            <!--<div class="clean-port-work-details">-->
+                                <!--<ul class="clean-work-meta">-->
+                                    <!--<li class="clean-lighbox"><a href="images/change/shizi_03.png" class="clean-featured-work-img"><i class="fa fa-cog"></i></a></li>-->
+                                <!--</ul>-->
+                            <!--</div>-->
+
+                        </div>
+                        <!-- Work 3 End -->
+
+                        <!-- Work 4 -->
+                        <div class="clean-portfolio-work-item">
+
+                            <div class="clean-port-work-details1">
+                                <img src="images/change/pic_04.jpg" alt="Feature Work 1">
+                                <div class="clean-port-work-details2 text-center">
+                                    <!--<h4>肖强东</h4>-->
+                                    <!--<p>金牌讲师,教你走向正确之路！</p>-->
+                                </div>
+                            </div>
+                            <!--<div class="clean-port-work-details">-->
+                                <!--<ul class="clean-work-meta">-->
+                                    <!--<li class="clean-lighbox"><a href="images/change/shizi_03.png" class="clean-featured-work-img"><i class="fa fa-cog"></i></a></li>-->
+                                <!--</ul>-->
+                            <!--</div>-->
+
+                        </div>
+                        <!-- Work 4 End -->
+
+                        <!-- Work 5 -->
+                        <div class="clean-portfolio-work-item">
+
+                            <div class="clean-port-work-details1">
+                                <img src="images/change/pic_05.jpg" alt="Feature Work 1">
+                                <div class="clean-port-work-details2 text-center">
+                                    <!--<h4>肖强东</h4>-->
+                                    <!--<p>金牌讲师,教你走向正确之路！</p>-->
+                                </div>
+                            </div>
+                            <!--<div class="clean-port-work-details">-->
+                                <!--<ul class="clean-work-meta">-->
+                                    <!--<li class="clean-lighbox"><a href="images/change/shizi_03.png" class="clean-featured-work-img"><i class="fa fa-cog"></i></a></li>-->
+                                <!--</ul>-->
+                            <!--</div>-->
+
+                        </div>
+                        <!-- Work 5 End -->
+
+                        <!-- Work 6 -->
+                        <div class="clean-portfolio-work-item">
+
+                            <div class="clean-port-work-details1">
+                                <img src="images/change/pic_06.jpg" alt="Feature Work 1">
+                                <div class="clean-port-work-details2 text-center">
+                                    <!--<h4>肖强东</h4>-->
+                                    <!--<p>金牌讲师,教你走向正确之路！</p>-->
+                                </div>
+                            </div>
+                            <!--<div class="clean-port-work-details">-->
+                                <!--<ul class="clean-work-meta">-->
+                                    <!--<li class="clean-lighbox"><a href="images/change/shizi_03.png" class="clean-featured-work-img"><i class="fa fa-cog"></i></a></li>-->
+                                <!--</ul>-->
+                            <!--</div>-->
+
+                        </div>
+                        <!-- Work 6 End -->
+
+                        <!-- Work 7 -->
+                        <!--<div class="clean-portfolio-work-item">-->
+
+                            <!--<div class="clean-port-work-details1">-->
+                                <!--<img src="images/change/shizi_03.png" alt="Feature Work 1">-->
+                                <!--<div class="clean-port-work-details2 text-center">-->
+                                    <!--<h4>肖强东</h4>-->
+                                    <!--<p>金牌讲师,教你走向正确之路！</p>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--&lt;!&ndash;<div class="clean-port-work-details">&ndash;&gt;-->
+                                <!--&lt;!&ndash;<ul class="clean-work-meta">&ndash;&gt;-->
+                                    <!--&lt;!&ndash;<li class="clean-lighbox"><a href="images/change/shizi_03.png" class="clean-featured-work-img"><i class="fa fa-cog"></i></a></li>&ndash;&gt;-->
+                                <!--&lt;!&ndash;</ul>&ndash;&gt;-->
+                            <!--&lt;!&ndash;</div>&ndash;&gt;-->
+
+                        <!--</div>-->
+                        <!-- Work 7 End -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Featured Works Slider -->
+
+
+
+    </section>
+
+    
+
+
+
+   <!-- ===================================
+        CONTACT SECTION
+    ==================================== -->
+    <section id="contact" class="clean-section-wrapper clean-contact-section background-one" data-stellar-background-ratio="0.5">
+    <div class="clean-parallax-overlay"></div>
+        <div class="container">
+            <div class="row">
+
+                <!-- Section Header -->
+                <div class="col-md-12 col-sm-12 col-xs-12 clean-section-header wow fadeInDown clean-section-header-parallax">
+                    <h1><span class="clean-color-contras">注册账号</span></h1>
+                    <div class="clean-line"></div>
+                    <p class="col-md-8 col-sm-10 col-xs-12 col-md-offset-2 col-sm-offset-1 font-css">加入我们，大发用事实告诉你，选择我们没有错！</p>
+                </div>
+                <!-- Section Header End -->
+
+                <div class="clean-contact-details">
+
+                    <!-- Contact Form -->
+                    <div class="col-md-12 col-sm-12 col-xs-12 clean-contact-form wow bounceInRight">
+						<div id="contact-result"></div>
+						<div id="contact-form">
+                            <div class="clean-input-name clean-input-fields">
+                                <label for="name">手机号:</label>
+                                <input type="text" name="name" id="name" required>
+                            </div>
+
+                            <!--<div class="clean-input-email clean-input-fields">-->
+                                <!--<label for="email">验证码:</label>-->
+                                <!--<input type="email" name="email" id="email" required>-->
+                                <!--<a class="yanzheng">获取验证码</a>-->
+                            <!--</div>-->
+
+                            <div class="clean-input-name clean-input-fields">
+                                <label for="name">登录密码:</label>
+                                <input type="text" name="name" id="pw" required>
+                            </div>
+
+                            <div class="clean-input-name clean-input-fields">
+                                <label for="name">确认密码:</label>
+                                <input type="text" name="name" id="pw2" required>
+                            </div>
+
+                            <input type="submit" value="立即注册" id="submit-btn">
+                        </div>
+                    </div>
+                    <!-- Contact Form End -->
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="clean-section-wrapper clean-contact-section background-one" data-stellar-background-ratio="0.5">
+        <div class="clean-parallax-overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12 clean-section-header wow fadeInDown clean-section-header-parallax">
+                    <h1><span class="clean-color-contras">加入我们</span></h1>
+                    <div class="clean-line"></div>
+                    <p class="col-md-8 col-sm-10 col-xs-12 col-md-offset-2 col-sm-offset-1 font-css">加入我们，一对一咨询服务</p>
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-4">
+                    <img src="images/change/weixin.png" class="img-responsive wow fadeInLeft">
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-4 text-center weixin">
+                    <img src="images/change/er.png" class="img-responsive wow fadeInDown" style="padding-left:20%;margin-bottom:10px;">
+                     微信扫一扫
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-4">
+                    <img src="images/change/weixin.png" class="img-responsive wow fadeInRight" style="margin:auto;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- ===================================
+        FOOTER SECTION
+    ==================================== -->
+    <div class="container-fluid foot">
+        <div class="container text-center">
+            CopyRight © 2014  版权所有 风险提示:投资风险,选择需谨慎
+        </div>
+    </div>
+
+
+
+
+    <!-- ===================================
+        SCRIPTS
+    ==================================== -->
+    <script src="js/modernizr.min.js"></script>
+	<script src="js/jquery-2.1.1.min.js"></script>
+    <script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+    <script src="js/jquery.easing.js"></script>
+    <script src="js/jquery.scrollUp.min.js"></script>
+    <script src="js/smooth-scroll.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/jquery.sliderPro.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.easypiechart.js"></script>
+    <script src="js/jquery.countTo.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/jquery.nav.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        $(".clean-port-work-details2").hide();
+        $(".clean-port-work-details1").mouseenter(function () {
+            $(this).find(".clean-port-work-details2").fadeIn();
+        }).mouseleave(function () {
+            $(this).find(".clean-port-work-details2").fadeOut();
+        });
+        $('#myCarousel').carousel({
+            interval: 3000
+        })
+    </script>
+</body>
+</html>
